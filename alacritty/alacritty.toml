@@ -1,0 +1,64 @@
+[general]
+# get color toml: curl -LO --output-dir ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+import = [
+ "./catppuccin-mocha.toml",
+]
+
+[window]
+startup_mode = "Maximized"
+
+# hide title and border
+#decorations = "None"
+title = "NixOS"
+dynamic_title = false
+
+decorations_theme_variant = "Light" # "Dark"
+
+opacity = 0.95
+#padding = { x = 15, y = 10 }
+
+[scrolling]
+history               = 65535
+#multiplier            = 3
+
+[font]
+normal.family = "Hack Nerd Font"
+bold.family = "Hack Nerd Font"
+italic.family = "Hack Nerd Font"
+bold_italic.family = "Hack Nerd Font"
+
+size = 15.0
+
+[terminal]
+shell = { program = "wsl", args = ["~", "-d", "NixOS"] }
+
+[keyboard]
+bindings = [
+  { key = "Return",  mods = "Control|Shift", action = "SpawnNewInstance" },
+  # Avoid to set Ctrl+C which is used to interrupt the shell
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "V", mods = "Control", action = "Paste" },
+  { key = "Up",   mods = "Shift",  action = "ScrollPageUp",      mode = "~Alt" },
+  { key = "Down", mods = "Shift",  action = "ScrollPageDown",    mode = "~Alt" },
+ ]
+
+[selection]
+# Automatically copy selected text to the clipboard
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
+# Optional: bind right-click to paste from PRIMARY selection
+bindings = [
+  { mouse = "Right", action = "PasteSelection" }
+ ]
+
+[cursor]
+style = { shape = "Beam", blinking = "Always" }
+vi_mode_style = { shape = "Block", blinking = "Off" }
+
+blink_interval = 500
+blink_timeout  = 0
+#unfocused_hollow = true
+#thickness = 0.15
+
