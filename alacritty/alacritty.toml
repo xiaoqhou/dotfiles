@@ -62,3 +62,6 @@ blink_timeout  = 0
 #unfocused_hollow = true
 #thickness = 0.15
 
+[env]
+TERM = "xterm-256color"
+
