@@ -14,17 +14,17 @@ vim.opt.rtp:prepend(lazypath)
 
 -- install plugins
 require("lazy").setup({
-	spec = {
-        -- core plugins
-		require("plugins.neo-tree"),
-		require("plugins.colorscheme"),
-		require("plugins.lualine"),
-		require("plugins.which-key"),
-		require("plugins.telescope"),
-        require("plugins.treesitter"),
+  spec = {
+    -- core plugins
+    require("plugins.neo-tree"),
+    require("plugins.colorscheme"),
+    require("plugins.lualine"),
+    require("plugins.which-key"),
+    require("plugins.telescope"),
+    require("plugins.treesitter"),
 
-		-- extra plugins
---		require("plugins.bufferline"),
---		require("plugins.autoformat"),
-	},
+    -- extra plugins
+    --		require("plugins.bufferline"),
+    --		require("plugins.autoformat"),
+  },
 })

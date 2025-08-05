@@ -16,7 +16,7 @@ return {
 	},
 	{
 		"folke/tokyonight.nvim",
-		cond = false, --don't uninstall the plugin when set to false
+		cond = true, --don't uninstall the plugin when set to false
 		lazy = false,
 		priority = 1000,
 		config = function(_, opts)

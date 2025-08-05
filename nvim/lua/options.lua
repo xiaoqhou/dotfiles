@@ -30,9 +30,9 @@ vim.o.cursorline = true
 vim.o.scrolloff = 10
 
 -- tab and indent
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
 vim.o.expandtab = true --expend tab to spaces
 vim.o.autoindent = true
 vim.o.smartindent = true
@@ -41,4 +41,21 @@ vim.o.wrap = false
 vim.o.linebreak = true
 
 -- sync vim clipboard with os
-vim.o.clipboard = "unnamedplus"
+--vim.o.clipboard = "unnamedplus"
+vim.g.clipboard = "osc52"
+
+-- WSL yank support, change the clip path according to your mount point
+local clip = "/mnt/c/Windows/System32/clip.exe"
+if vim.fn.executable(clip) == 1 then
+  vim.api.nvim_create_augroup("WSLYank", { clear = true })
+  vim.api.nvim_create_autocmd("TextYankPost", {
+    group = "WSLYank",
+    callback = function()
+      if vim.v.event.operator == "y" then
+        vim.fn.system(clip, vim.fn.getreg('"'))
+      end
+    end,
+  })
+end
+
+vim.o.winbar = "%=%m %f"
