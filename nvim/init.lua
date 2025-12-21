@@ -22,7 +22,7 @@ require("lazy").setup({
     require("plugins.which-key"),
     require("plugins.telescope"),
     require("plugins.treesitter"),
-
+    require("plugins.lspconfig"),
     -- extra plugins
     --		require("plugins.bufferline"),
     --		require("plugins.autoformat"),
