@@ -1,3 +1,4 @@
+** This was cloned from AstronNvim using `git clone --depth 1 https://github.com/AstroNvim/template astronvim` **
 # AstroNvim Template
 
 **NOTE:** This is for AstroNvim v6+
