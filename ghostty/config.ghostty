@@ -1,0 +1,29 @@
+# keybinding
+# split right: cmd+enter, split down: cmd+shift+enter
+keybind = cmd+enter=new_split:right
+keybind = cmd+shift+enter=new_split:down
+# tmux integration - send save-buffer command `ctl-a s`
+keybind = cmd+s=text:\x01\x73
+# tmux prefix to toggle zoom on current pane `clt-a z`
+keybind = cmd+b=text:\x01\x7a
+
+# aesthetics
+background-opacity=0.88
+background-blur=20
+
+# typography
+font-family="JetBrains Mono"
+font-size=18
+font-thicken=true
+font-thicken-strength=1
+adjust-cell-height=1
+
+# window
+window-padding-x=10
+window-padding-y=10
+
+# threme
+#theme = catppuccin-mocha
+
+copy-on-select = clipboard
+#confirm-close-surface = false
